@@ -1,0 +1,213 @@
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 58px;
+
+    @include for-phone {
+        justify-content: space-between;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__lbl {
+        display: none;
+        @include for-phone {
+            display: block;
+        }
+    }
+
+    &__img {
+
+        @include for-phone {
+            
+        }
+    }
+
+    &__card {
+        display: none;
+       
+        @include for-phone {
+            display: block;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            transform: translateY(-100%);
+            position: absolute;
+            z-index: 8;
+
+        }
+    }
+
+    @include for-tablet {
+        column-gap: 35px;
+    }
+
+    &__bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        @include for-phone {
+            width: 70%;
+            height: 60vh;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #333A44;
+            z-index: 3;
+            align-items: flex-start;
+            padding:64px 0 24px 50px;
+            row-gap: 339px;
+            transform: translateY(-150%);
+        }
+        
+    }
+
+    ul {
+        display: flex;
+        column-gap: 32px;
+
+        @include for-tablet {
+            column-gap: 20px;
+        }
+
+        @include for-phone {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+    }
+
+    a {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        color: $main-color;
+
+        @include for-phone {
+            font-size: 18px;
+        }
+    }
+}
+
+nav {
+    padding: 20px 0;
+}
+
+.hero {
+    background-image: url('../../images/head-back-img.png') ;
+    max-width: 1440px;
+    min-height: 650px;
+    margin: 0 auto;
+    background-position: center;
+    position: relative;
+
+    @include for-large-tablet {
+        background-image: url('../../images/large-tablet.png');
+
+    }
+
+    &__img {
+        display: none;
+        @include for-phone {
+            position: absolute;
+            display: block;
+            bottom: 3%;
+        }
+        
+    }
+
+    &__img1 {
+        display: none;
+
+        @include for-large-tablet {
+            display: block;
+            top: 483px;
+            position: absolute;
+        }
+        @include for-phone {
+            display: none;
+        }
+    }
+
+    
+
+    &__title {
+        padding: 153px 0 0 0;
+
+        @include for-large-tablet {
+            padding-top: 130px;
+            text-align: center;
+        }
+
+        @include for-phone {
+            padding-top: 110px;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 56px;
+            max-width: 500px;
+            letter-spacing: -2.5px;
+            color: #FFFFFF;
+
+            @include for-large-tablet {
+                margin: auto;
+                max-width: 540px;
+               
+            }
+
+            @include for-phone {
+                font-size: 40px;
+                line-height: 40px;
+                letter-spacing: -1.78571px;
+                max-width: 311px;
+            }
+
+        }
+
+        p {
+            @include for-large-tablet {
+                margin: 0 auto;
+                max-width: 573px;
+                
+            }
+
+            @include for-phone {
+                max-width: 311px;
+                padding: 25px 0;
+            }
+            padding: 40px 0;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: #FFFFFF;
+            max-width: 405px;
+        }
+
+        
+    }
+}
+
+.hero__card {
+    margin-left: 70px;
+
+    @include for-large-tablet {
+        padding: 0;
+        margin: 0;
+       
+    }
+}
+
+.card__lbl img{
+    margin: 0 99px 0 40px;
+}
+
+.menu__input:checked~.menu__bar {
+    transform: translateY(0);
+}

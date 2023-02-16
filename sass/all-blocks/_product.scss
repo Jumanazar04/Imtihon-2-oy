@@ -1,0 +1,74 @@
+.products {
+    background-image: url('../../images/bac-img-product.png');
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    background-position-y: 48px;
+    margin: 0 auto;
+
+    @include for-tablet {
+        background-image:  url('../../images/icons/path3.svg');
+        background-repeat: no-repeat;
+        background-position-x: 60px;
+    }
+    
+    @include for-phone {
+        background-image: none;
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    margin: 160px 0 140px 0;
+
+    @include for-tablet {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    
+
+    
+
+    &__card {
+
+        @include for-tablet {
+            display: flex;
+            column-gap: 79px; 
+        }
+
+        @include for-phone {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+
+        
+        
+        h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $heading-color ;
+            padding: 40px 0 27px 0;
+
+            @include for-phone {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: $main-color;
+
+            @include for-phone {
+                max-width: 311px;
+            }
+        }
+    }
+}
