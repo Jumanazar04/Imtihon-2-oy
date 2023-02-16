@@ -163,6 +163,14 @@ nav {
   color: #FFFFFF;
 }
 
+li {
+  transition: 1s;
+}
+
+li:hover {
+  transform: scale(1.3, 1.3);
+}
+
 .work {
   position: relative;
   max-width: 1440px;
@@ -512,4 +520,8 @@ nav {
   font-size: 15px;
   line-height: 25px;
   padding: 14px 39px;
+}
+
+.btn:hover {
+  transform: scale(1.2, 1.3);
 }/*# sourceMappingURL=about.css.map */
