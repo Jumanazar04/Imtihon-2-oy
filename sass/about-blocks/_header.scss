@@ -1,0 +1,129 @@
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 58px;
+
+    @include for-phone {
+        justify-content: space-between;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__lbl {
+        display: none;
+        @include for-phone {
+            display: block;
+        }
+    }
+
+    &__img {
+
+        @include for-phone {
+            
+        }
+    }
+
+    &__card {
+        display: none;
+       
+        @include for-phone {
+            display: block;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            transform: translateY(-100%);
+            position: absolute;
+            z-index: 8;
+
+        }
+    }
+
+    @include for-tablet {
+        column-gap: 35px;
+    }
+
+    &__bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        @include for-phone {
+            width: 70%;
+            height: 60vh;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #333A44;
+            z-index: 3;
+            align-items: flex-start;
+            padding:64px 0 24px 50px;
+            row-gap: 339px;
+            transform: translateY(-150%);
+        }
+        
+    }
+
+    ul {
+        display: flex;
+        column-gap: 32px;
+
+        @include for-tablet {
+            column-gap: 20px;
+        }
+
+        @include for-phone {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+    }
+
+    a {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        color: $main-color;
+
+        @include for-phone {
+            font-size: 18px;
+        }
+    }
+}
+
+nav {
+    padding: 20px 0;
+}
+.card__lbl img{
+    margin: 0 99px 0 40px;
+}
+
+.menu__input:checked~.menu__bar {
+    transform: translateY(0);
+}
+
+.hero {
+    background-image: url('../../images/about-hero.png');
+    max-width: 1440px;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 72px;
+
+    @include for-phone {
+        background-position: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -2.5px;
+        color: #FFFFFF;
+    }
+}

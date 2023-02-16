@@ -1,0 +1,70 @@
+.advice {
+    h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        color: $heading-color;
+        text-align: center;
+        margin: 80px auto;
+        letter-spacing: -2.14286px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -1.78571px;
+        color: $heading-color;
+        @include for-tablet {
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1.07143px;
+        color: $heading-color;
+        @include for-tablet {
+            font-size: 20px;
+            max-width: 219px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: $heading-color;
+    }
+}
+
+.advice__card{
+    
+
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 64px;
+        @include for-tablet {
+            flex-direction: column;
+        }
+    }
+}
+
+.advice__child {
+    max-width: 730px;
+    background-color:    #F2F5F9;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    margin-bottom: 16px;
+      
+    
+}
