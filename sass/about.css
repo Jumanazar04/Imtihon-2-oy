@@ -520,6 +520,7 @@ li:hover {
   font-size: 15px;
   line-height: 25px;
   padding: 14px 39px;
+  transition: 1s;
 }
 
 .btn:hover {
