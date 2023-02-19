@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     column-gap: 58px;
+    
+    
+
 
     @include for-phone {
         justify-content: space-between;
@@ -104,6 +107,10 @@ li:hover {
 
 nav {
     padding: 20px 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .hero {
